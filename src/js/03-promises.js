@@ -10,7 +10,7 @@ function onSubmit(event) {
 
   let iterationDelay = Number(delay.value);
   for (let i = 1; i <= amount.value; i++) {
-    createPromise(i, delayStep)
+    createPromise(i, iterationDelay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`, { useIcon: false });
       })
