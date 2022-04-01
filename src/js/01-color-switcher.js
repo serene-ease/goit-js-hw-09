@@ -9,14 +9,14 @@ function onClickStart() {
     timerId = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor();
     }, 1000);
-    btnStart.setAttribute('disabled', true);
-    btnStop.removeAttribute('disabled');
+    btnStartRef.setAttribute('disabled', true);
+    btnStopRef.removeAttribute('disabled');
 };
 
 function onClickStop() { 
     clearInterval(timerId);
-    btnStart.removeAttribute('disabled');
-    btnStop.setAttribute('disabled', true);
+    btnStartRef.removeAttribute('disabled');
+    btnStopRef.setAttribute('disabled', true);
 };
 
 function getRandomHexColor() {
